@@ -8,8 +8,7 @@ import { Quotes } from './quotes';
 })
 export class AppComponent {
   quotes:Quotes[] = [
-    new Quotes(1, 'my name is osman','am 21 yrs old'),
-    new Quotes(2, 'my favourate person','ifka'),
-  ];
+      new Quotes(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son'),
+      new Quotes(2,'Buy Cookies','I have to buy cookies for the parrot')
+    ];
   }
-
