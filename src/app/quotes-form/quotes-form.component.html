@@ -1,32 +1,17 @@
 <div class="container-fluid">
-    <h2 class="text-center">create a quotes</h2>
-    <hr>
-    <form>
-        <div class="form-group">
-  
-            <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name">
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                    <p>Name is required</p>
-                  </div>
-        </div>
-        <div class="form-group">
-  
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
-            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                    <p>Description is required</p>
-                  </div>
-  
-        </div>
-        <div class="form-group">
-            <label for="complete">Completion</label>
-            <input type='date' id="complete" required>
-            <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-                    <p>Date is required</p>
-                  </div>
-  
-        </div>
-        <button type="submit" class="btn btn-success">Add quotes</button>
-    </form>
-  </div>
+  <h2 class="text-center">Create a new Goal</h2>
+  <hr>
+  <form (ngSubmit)='submit()' #quotesForm='ngForm'>
+   <div class="form-group">
+    <label for="auother">Auothers Name</label>
+    <input required ngModel name="auother" #auother="ngModel" id="auother" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="auother.touched && !auother.valid">Auother name is required</div>
+</div>
+<div class="form-group">
+  <label for="quote">Write quote</label>
+  <textarea required ngModel name="quote" #quote="ngModel" id="quote" cols="12" rows="12"
+    class="form-control"></textarea>
+  <div class="alert alert-danger" *ngIf="quote.touched && !quote.valid">the quote is required</div>
+</div>
+<button class="btn btn-primary">submit</button>
+</form>
