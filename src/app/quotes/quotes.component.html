@@ -6,8 +6,8 @@
       <div class="col-md-12">
         <div *ngFor='let quotes of quotes;let i = index'>
           <div>
-            <h4 id={{i}} appStrikethrough>{{quotes.name}} due on {{quotes.completeDate|date|uppercase}}</h4>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+            <!-- <h4 id={{i}} appStrikethrough>{{quotes.name}} due on {{quotes.completeDate|date|uppercase}}</h4> -->
+            <button (click)='toggleDetails(i)' class="btn btn-primary">view Details</button>
           </div>
   
           <div *ngIf='quotes.showDescription'>
@@ -18,6 +18,6 @@
             <app-quotes-form (addQuotes)="addNewQuotes($event)"></app-quotes-form>
     </div>
       </div>
-      <p *ngIf='quotes.length > 5'>You have too many goals</p>
+      <p *ngIf='quotes.length > 5'>You have too many quotes</p>
     </div>
   </div>

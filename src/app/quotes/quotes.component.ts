@@ -13,7 +13,7 @@ export class QuotesComponent implements OnInit {
     'by Oscar Wilde the quote was submited by osman',new Date(2020,3,14)),
   new Quotes(2,'Be the change that you wish to see in the world','Mahatma Gandhi',new Date(2019,6,9)),
   ];
-  addNew(quotes){
+  addNewQuotes(quotes){
     let quotesLength = this.quotes.length;
     quotes.id = quotesLength+1;
     quotes.completeDate = new Date(quotes.completeDate)
@@ -25,9 +25,9 @@ export class QuotesComponent implements OnInit {
   deleteQuotes(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
-    }
-    if (isComplete) {
-      this.quotes.splice(index,1);
+      if (toDelete) {
+        this.quotes.splice(index,1);
+      }
     }
   }
 
