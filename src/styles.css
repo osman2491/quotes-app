@@ -1,1 +1,18 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+    background-image: url(../src/assets/back.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color:white;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.text-center{
+    color: whitesmoke;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+label{
+color: white;
+}

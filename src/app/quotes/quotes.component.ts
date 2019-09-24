@@ -1,3 +1,4 @@
+import { Quotes } from './../quotes';
 import { Component, OnInit } from '@angular/core';
 import {Quotes} from '../quotes';
 
@@ -25,9 +26,9 @@ export class QuotesComponent implements OnInit {
   deleteQuotes(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
-      if (toDelete) {
-        this.quotes.splice(index,1);
-      }
+    }
+    if (isComplete) {
+      this.quotes.splice(index,1);
     }
   }
 

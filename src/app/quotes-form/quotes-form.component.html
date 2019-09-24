@@ -1,22 +1,22 @@
 <div class="container-fluid">
-  <h2 class="text-center">Create new quote</h2>
+  <h2 class="text-center">CREATE YOUR QUOTE.</h2>
   <hr>
-  <form (ngSubmit)='submitQuotes()' #quotesForm='ngForm'>
+  <form (ngSubmit)='submitQuotes(quotesForm.value)'  #quotesForm='ngForm'>
    <div class="form-group">
-    <label for="submiter">submiter</label>
-    <input required [(ngModel)]="newQuotes.submiter" class="form-control" name="submiter" #submiter="ngModel" id="submiter" type="text" class="form-control">
-    <div class="alert alert-danger" *ngIf="submiter.touched && !submiter.valid">submiter name is required</div>
+    <label for="submiter">Write your Quote</label>
+    <textarea  cols="30" rows="10" required [(ngModel)]="newQuotes.submiter" class="form-control" name="submiter" #submiter="ngModel" id="submiter" type="text" class="form-control"> </textarea>
+    <div class="alert alert-danger" *ngIf="submiter.touched && !submiter.valid">the quote is required</div>
 </div>
 <div class="form-group">
-    <label for="auother">Auothers Name</label>
+    <label for="auother">Aouther's Name</label>
     <input required [(ngModel)]="newQuotes.auother" class="form-control" name="auother" #auother="ngModel" id="auother" type="text" class="form-control">
     <div class="alert alert-danger" *ngIf="auother.touched && !auother.valid">Auother name is required</div>
 </div>
 <div class="form-group">
-  <label for="quote">Write quote</label>
-  <textarea required [(ngModel)]="newQuotes.quote" class="form-control" name="quote" #quote="ngModel" id="quote" cols="12" rows="12"
-    class="form-control"></textarea>
-  <div class="alert alert-danger" *ngIf="quote.touched && !quote.valid">the quote is required</div>
+  <label for="quote">Submitter</label>
+  <input required [(ngModel)]="newQuotes.quote" class="form-control" name="quote" #quote="ngModel" id="quote"
+    class="form-control">
+  <div class="alert alert-danger" *ngIf="quote.touched && !quote.valid">The submitter name is required</div>
 </div>
 <button type="submit" class="btn btn-primary">submit</button>
 </form>
