@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 ### languages used. 
-html
+html,
 css
 typescript
 
